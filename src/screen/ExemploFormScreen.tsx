@@ -14,6 +14,7 @@ export default function ExemploFormScreen() {
     <ScrollView
       style={formStyles.container}
       contentContainerStyle={formStyles.scrollContent}
+      keyboardShouldPersistTaps="handled"
     >
       <View style={formStyles.header}>
         <Text style={formStyles.title}>

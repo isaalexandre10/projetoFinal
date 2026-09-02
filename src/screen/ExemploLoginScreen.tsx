@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
+import CustomInput from '../components/CustomInputComponents';
 import { loginStyles } from '../styles/LoginStyles';
 
 export default function ExemploLoginScreen() {
@@ -34,6 +35,10 @@ export default function ExemploLoginScreen() {
             placeholder="Digite seu e-mail"
             placeholderTextColor="#9CA3AF"
           />
+          {/*<CustomInput
+            label="E-mail"
+            placeholder="Digite seu e-mail"
+          />*/}
 
           <Text style={loginStyles.label}>
             Senha
