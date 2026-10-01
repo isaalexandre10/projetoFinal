@@ -9,7 +9,7 @@ import {
 
 import { formStyles } from '../styles/FormStyles';
 
-export default function ExemploFormScreen() {
+export default function ExemploFormScreen({ navigation }: any) {
   return (
     <ScrollView
       style={formStyles.container}
@@ -120,7 +120,9 @@ export default function ExemploFormScreen() {
 
         {/* Botões */}
         <View style={formStyles.buttonContainer}>
-          <TouchableOpacity style={formStyles.cancelButton}>
+          <TouchableOpacity style={formStyles.cancelButton}
+          onPress={() => navigation.goBack()}
+          >
             <Text style={formStyles.cancelButtonText}>
               Cancelar
             </Text>

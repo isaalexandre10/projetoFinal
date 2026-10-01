@@ -8,10 +8,9 @@ import {
 
 import { dashboardStyles } from '../styles/DashboardStyles';
 
-export default function ExemploDashboardScreen() {
+export default function ExemploDashboardScreen({ navigation }: any) {
   return (
-    <View style={dashboardStyles.container}>
-
+    <ScrollView style={dashboardStyles.container}>
       <ScrollView
         contentContainerStyle={dashboardStyles.content}
       >
@@ -30,21 +29,12 @@ export default function ExemploDashboardScreen() {
           </View>
 
           <View style={dashboardStyles.headerActions}>
-
-            <TouchableOpacity
-              style={dashboardStyles.headerIconButton}
-            >
-              <Text>🔔</Text>
-            </TouchableOpacity>
-
             <TouchableOpacity
               style={dashboardStyles.headerIconButton}
             >
               <Text>👤</Text>
             </TouchableOpacity>
-
           </View>
-
         </View>
 
         {/* Resumo */}
@@ -53,7 +43,6 @@ export default function ExemploDashboardScreen() {
         </Text>
 
         <View style={dashboardStyles.metricsContainer}>
-
           <View style={dashboardStyles.metricCard}>
             <Text style={dashboardStyles.metricLabel}>
               Produtos
@@ -81,7 +70,6 @@ export default function ExemploDashboardScreen() {
               Disponíveis
             </Text>
           </View>
-
         </View>
 
         {/* Ações */}
@@ -93,6 +81,7 @@ export default function ExemploDashboardScreen() {
 
           <TouchableOpacity
             style={dashboardStyles.actionButton}
+            onPress={() => navigation.navigate('Form')}
           >
 
             <View style={dashboardStyles.actionIcon}>
@@ -107,6 +96,7 @@ export default function ExemploDashboardScreen() {
 
           <TouchableOpacity
             style={dashboardStyles.actionButton}
+            onPress={() => navigation.navigate('List')}
           >
 
             <View style={dashboardStyles.actionIcon}>
@@ -118,35 +108,6 @@ export default function ExemploDashboardScreen() {
             </Text>
 
           </TouchableOpacity>
-
-          <TouchableOpacity
-            style={dashboardStyles.actionButton}
-          >
-
-            <View style={dashboardStyles.actionIcon}>
-              <Text>📁</Text>
-            </View>
-
-            <Text style={dashboardStyles.actionText}>
-              Categorias
-            </Text>
-
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            style={dashboardStyles.actionButton}
-          >
-
-            <View style={dashboardStyles.actionIcon}>
-              <Text>⚙️</Text>
-            </View>
-
-            <Text style={dashboardStyles.actionText}>
-              Configurações
-            </Text>
-
-          </TouchableOpacity>
-
         </View>
 
       </ScrollView>
@@ -189,6 +150,6 @@ export default function ExemploDashboardScreen() {
           </Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </ScrollView>
   );
 }

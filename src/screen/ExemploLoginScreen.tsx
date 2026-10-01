@@ -9,7 +9,7 @@ import {
 import CustomInput from '../components/CustomInputComponents';
 import { loginStyles } from '../styles/LoginStyles';
 
-export default function ExemploLoginScreen() {
+export default function ExemploLoginScreen({ navigation }: any) {
   return (
     <View style={loginStyles.container}>
       <View style={loginStyles.content}>
@@ -35,10 +35,6 @@ export default function ExemploLoginScreen() {
             placeholder="Digite seu e-mail"
             placeholderTextColor="#9CA3AF"
           />
-          {/*<CustomInput
-            label="E-mail"
-            placeholder="Digite seu e-mail"
-          />*/}
 
           <Text style={loginStyles.label}>
             Senha
@@ -60,10 +56,25 @@ export default function ExemploLoginScreen() {
           </TouchableOpacity>
 
           <TouchableOpacity style={loginStyles.loginButton}>
-            <Text style={loginStyles.loginButtonText}>
+            <Text style={loginStyles.loginButtonText}
+            onPress={() => navigation.navigate('Form')}>
               Entrar
             </Text>
           </TouchableOpacity>
+          <TouchableOpacity
+                   
+                      onPress={() => navigation.navigate('Form')}
+                    >
+          
+                      <View >
+                        <Text>➕</Text>
+                      </View>
+          
+                      <Text>
+                        Cadastrar Produto
+                      </Text>
+          
+                    </TouchableOpacity>
 
           <View style={loginStyles.createAccountContainer}>
             <Text style={loginStyles.createAccountText}>
