@@ -61,21 +61,7 @@ export default function ExemploLoginScreen({ navigation }: any) {
               Entrar
             </Text>
           </TouchableOpacity>
-          <TouchableOpacity
-                   
-                      onPress={() => navigation.navigate('Form')}
-                    >
           
-                      <View >
-                        <Text>➕</Text>
-                      </View>
-          
-                      <Text>
-                        Cadastrar Produto
-                      </Text>
-          
-                    </TouchableOpacity>
-
           <View style={loginStyles.createAccountContainer}>
             <Text style={loginStyles.createAccountText}>
               Não possui uma conta?
