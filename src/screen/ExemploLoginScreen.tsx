@@ -55,9 +55,9 @@ export default function ExemploLoginScreen({ navigation }: any) {
             </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={loginStyles.loginButton}>
-            <Text style={loginStyles.loginButtonText}
-            onPress={() => navigation.navigate('Form')}>
+          <TouchableOpacity style={loginStyles.loginButton}
+          onPress={() => navigation.navigate('Dashboard')}>
+            <Text style={loginStyles.loginButtonText}>
               Entrar
             </Text>
           </TouchableOpacity>
